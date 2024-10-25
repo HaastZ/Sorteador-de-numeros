@@ -34,3 +34,7 @@ body {
     background-color: var(--background-primary);
     font-family: var(--font-family);
 }
+
+.none {
+    display: none;
+}

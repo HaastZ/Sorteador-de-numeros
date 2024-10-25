@@ -6,8 +6,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/icon-fav.svg" type="image/x-icon">
     <link rel="stylesheet" href="./css/index.css">
-    <title>Sorteador de números</title>
+    <title>Sorteador de Números</title>
 </head>
 <body>
     <header>
@@ -32,7 +33,7 @@
                 </div>
             </div>
         </div>
-        <div class="sorteio">
+        <div class="sorteio none">
             <h2>Quero sortear:</h2>
             <form action="">
                 <p>defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
@@ -59,6 +60,18 @@
                     <img src="./assets/seta-button.svg" alt="">
                 </button>
             </form>
+        </div>
+        <div class="result-sorteio">
+            <h2>Resultado do Sorteio</h2>
+            <p>1° resultado</p>
+            <div class="results">
+                <p>23</p>
+                <p>12</p>
+            </div>
+            <button>
+                <span>sortear novamente</span>
+                <img src="./assets/icon-voltar.svg" alt="">
+            </button>
         </div>
     </main>
 </body>
