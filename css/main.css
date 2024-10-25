@@ -1,0 +1,143 @@
+main {
+    margin: 5.56rem 8.375rem;
+    display: flex;
+    gap: 6.75rem;
+
+    & .infos {
+        & span {
+            background: linear-gradient(45deg, var(--gradient-content));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text; /* Para navegadores modernos */
+            text-transform: uppercase;
+        }
+
+        & h1 {
+            color: var(--content-primary);
+            text-transform: uppercase;
+            width: 31.75rem;
+            height: 11.75rem;
+            font-weight: 700;
+            font-size: 4.5rem;
+            margin-top: 0.75rem;
+        }
+
+        & .item-1 {
+            display: flex;
+
+            & img {
+                position: relative;
+                bottom: 2.24rem;
+            }
+
+            & div {
+                & small {
+                    color: var(--content-brand);
+                }
+
+                & p {
+                    color: var(--content-secondary);
+                    width: 22.37rem;
+                }
+            }
+        }
+
+        & .item-2 {
+            display: flex;
+            margin-top: 2.25rem;
+
+            & img {
+                position: relative;
+                bottom: 2.24rem;
+            }
+
+            & div {
+                & small {
+                    color: var(--content-brand);
+                }
+
+                & p {
+                    color: var(--content-secondary);
+                    width: 22.37rem;
+                }
+            }
+        }
+    }
+
+    & .sorteio {
+        & h2 {
+            color: var(--content-primary);
+            text-transform: uppercase;
+        }
+
+        & form {
+            & p {
+                color: var(--content-secondary);
+                margin-top: 2px;
+            }
+
+            & .numbers {
+                display: flex;
+                gap: 0.75rem;
+                margin-top: 2.5rem;
+
+                & .number:nth-child(2), .number:nth-child(3) {
+                    & p {
+                        position: relative;
+                        left: 25px;
+                    }
+                }
+
+                & .number {
+                    & p {
+                        text-transform: uppercase;
+                    }
+
+                    & input {
+                        width: 86px;
+                        height: 2.5rem;
+                        margin-top: 0.5rem;
+                        border-radius: 0.5rem;
+                        background-color: var(--background-secondary);
+                        border: 1px solid var(--background-secondary);
+                        color: var(--content-primary);
+                        font-size: 29px;
+                        text-align: center;
+
+                        &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
+                            -webkit-appearance: none;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+
+            & .not-repeat {
+                display: flex;
+                gap: 0.5rem;
+                margin-top: 1.25rem;
+                color: var(--content-secondary);
+            }
+
+            & button {
+                width: 100%;
+                height: 3.5rem;
+                background-color: var(--background-tertiary);
+                display: flex;
+                gap: 0.5rem;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid var(--background-tertiary);
+                text-transform: uppercase;
+                color: var(--content-primary);
+                border-radius: 0.75rem;
+                cursor: pointer;
+                margin-top: 3.5rem;
+
+                &:hover {
+                    background-color: #313036;
+                }
+            }
+        }
+    }
+}
