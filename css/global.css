@@ -38,3 +38,7 @@ body {
 .none {
     display: none;
 }
+
+ul {
+    list-style: none;
+}
