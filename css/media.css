@@ -1,0 +1,54 @@
+@media(width <= 22.93rem) {
+    header {
+        margin: 2.75rem 6.81rem;
+    }
+
+    main {
+        margin: 2.187rem;
+        display: flex;
+        flex-direction: column;
+
+        & .infos {
+            & h1 {
+                font-size: 40px;
+                height: 6rem;
+            }
+
+            & .item-1, & .item-2 {
+                margin-top: 1.875rem;
+
+                & > div {
+                    width: 18.75rem;
+
+                    & p {
+                        width: 100%;
+                    }
+
+                    & small {
+                        font-size: 0.81rem;
+                    }
+                }
+            }
+
+            & .item-1 {
+                & img {
+                    bottom: 2.812rem;
+                }
+            }
+        }
+
+        & .sorteio {
+            position: relative;
+            bottom: 3.125rem;
+        }
+
+        & .result-sorteio {
+            position: relative;
+            bottom: 3.125rem;
+            & h2 {
+                font-size: 1.375rem;
+            }
+        }
+
+    }
+}
