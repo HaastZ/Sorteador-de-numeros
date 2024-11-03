@@ -18,12 +18,12 @@ form.addEventListener("submit", (event) => {
     const numbers = SortearNumeros(quantity.value, interval1.value, interval2.value)
     
     const li = document.createElement("li")
-    for(let i = 0; i < numbers.length - 1; i++) {
+    for(let i = 0; i < numbers.length; i++) {
         li.textContent = numbers[i]
     }
     
     if(quantity.value === "" || interval1 === "" || interval2 === "") {
-        alert("Erro! Não foi possível sortear.")
+        alert("Erro! Não foi possível sortear. Parece que você enviou sem número!")
     }
     else {
         results.append(li)
@@ -44,7 +44,7 @@ function SortearNumeros(quantity, min, max) {
     const numerosSorteados = []
 
     for(let i = 0; i < quantity; i++) {
-        const numero = Math.floor(Math.random() * (max - min + 1)) + min
+        const numero = Math.floor(Math.random() * (max - min + 1))
         numerosSorteados.push(numero)
     }
 
