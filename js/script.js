@@ -17,16 +17,17 @@ form.addEventListener("submit", (event) => {
 
     const numbers = SortearNumeros(quantity.value, interval1.value, interval2.value)
     
-    const li = document.createElement("li")
-    for(let i = 0; i < numbers.length; i++) {
-        li.textContent = numbers[i]
-    }
-    
     if(quantity.value === "" || interval1 === "" || interval2 === "") {
         alert("Erro! Não foi possível sortear. Parece que você enviou sem número!")
     }
     else {
-        results.append(li)
+
+        for(let i = 0; i < numbers.length; i++) {
+            const li = document.createElement("li")
+            li.textContent = numbers[i]
+            results.append(li)
+        }
+
         divResultSorteio.classList.remove("none")
         divSortear.classList.add("none")
         countSorteio++
@@ -49,4 +50,8 @@ function SortearNumeros(quantity, min, max) {
     }
 
     return numerosSorteados;
+}
+
+function NotRepeatNumber() {
+    const numbers = SortearNumeros(quantity.value, interval1.value, interval2.value)
 }
