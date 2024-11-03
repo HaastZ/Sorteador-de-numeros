@@ -1,3 +1,5 @@
+"use strict"
+
 const quantity = document.getElementById("quantity")
 const interval1 = document.getElementById("interval-1")
 const interval2 = document.getElementById("interval-2")
@@ -21,8 +23,8 @@ form.addEventListener("submit", (event) => {
         alert("Erro! Não foi possível sortear. Parece que você enviou sem número!")
     }
     else {
-
-        for(let i = 0; i < numbers.length; i++) {
+        const numbersFortated = NotRepeatNumber(numbers, quantity.value)
+        for(let i = 0; i < numbersFortated.length; i++) {
             const li = document.createElement("li")
             li.textContent = numbers[i]
             results.append(li)
@@ -52,6 +54,14 @@ function SortearNumeros(quantity, min, max) {
     return numerosSorteados;
 }
 
-function NotRepeatNumber() {
-    const numbers = SortearNumeros(quantity.value, interval1.value, interval2.value)
+function NotRepeatNumber(numbers, quantity) {
+    let NumbersUnique = []
+    if(notRepeatNumber.checked) {
+        NumbersUnique = [...new Set(numbers)]
+    }
+    else {
+        NumbersUnique = numbers
+    }
+
+    return NumbersUnique
 }
